@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class EnemyWaveManager : MonoBehaviour
 {
     public enum WavePhase{
@@ -18,6 +17,7 @@ public class EnemyWaveManager : MonoBehaviour
 
     [SerializeField]
     private WavePhase phase;
+
     [Header("Generic Data")]
     public List<WaveMember> enemies = new List<WaveMember>();
 

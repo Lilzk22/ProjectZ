@@ -18,7 +18,9 @@ public class Enemy : MonoBehaviour
 
     [SerializeField]
     private AnimatorControllerList animatorControllerList;
+
     public Animator anim;
+
     private void Start()
     {
         agent.GetComponent<NavMeshAgent>();

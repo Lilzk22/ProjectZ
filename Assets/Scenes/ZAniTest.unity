@@ -3069,6 +3069,7 @@ MonoBehaviour:
   stoppingDistance: 2
   agent: {fileID: 392285080}
   target: {fileID: 1728081488}
+  animatorControllerList: {fileID: 0}
   anim: {fileID: 392285078}
 --- !u!65 &392285083
 BoxCollider:
@@ -5835,6 +5836,7 @@ MonoBehaviour:
   stoppingDistance: 2
   agent: {fileID: 779051209}
   target: {fileID: 1728081488}
+  animatorControllerList: {fileID: 11400000, guid: 040a84cf22f38994abec9e62fb9c85a6, type: 2}
   anim: {fileID: 779051208}
 --- !u!65 &779051212
 BoxCollider:
@@ -8554,6 +8556,7 @@ MonoBehaviour:
   stoppingDistance: 2
   agent: {fileID: 1145409166}
   target: {fileID: 1728081488}
+  animatorControllerList: {fileID: 0}
   anim: {fileID: 1145409165}
 --- !u!65 &1145409169
 BoxCollider:
@@ -13524,6 +13527,7 @@ MonoBehaviour:
   stoppingDistance: 2
   agent: {fileID: 1803233295}
   target: {fileID: 1728081488}
+  animatorControllerList: {fileID: 0}
   anim: {fileID: 1803233294}
 --- !u!65 &1803233298
 BoxCollider:

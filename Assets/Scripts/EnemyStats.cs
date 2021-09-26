@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStats : CharacterStats
 {
     public float scoreAddAmount = 10;
+   // public static int maxHealth = 100;
 
     Spawner spawn;
     //public Animator anim;
@@ -14,10 +15,10 @@ public class EnemyStats : CharacterStats
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         spawn = gameController.GetComponentInChildren<Spawner>();
-       // anim.GetComponent<Animator>();
-
+        // anim.GetComponent<Animator>();
         maxHealth = 100;
         currentHealth = maxHealth;
+
     }
     private void Update()
     {

@@ -84,7 +84,7 @@ public class Gun : MonoBehaviour
             }
             else
             {
-              GameObject impactGO =  Instantiate(otherHit, hit.point, Quaternion.LookRotation(hit.normal));
+                GameObject impactGO =  Instantiate(otherHit, hit.point, Quaternion.LookRotation(hit.normal));
                 Destroy(impactGO, 2);
             }
 

@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     private int currAmmo;
     public float reloadTime = 2;
     private bool isReloading = false;
+   
 
     public Camera fpsCamera;
     public ParticleSystem muzzleFlash;
@@ -24,9 +25,8 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
-        if(currAmmo == -1)
         currAmmo = maxAmmo;
-        isReloading = false;
+
     }
 
     private void OnEnable()
@@ -56,8 +56,8 @@ public class Gun : MonoBehaviour
     {
         isReloading = true;
         animator.SetBool("isReloading" , true);
-
         yield return new WaitForSeconds(reloadTime - .25f);
+
         animator.SetBool("isReloading", false);
         yield return new WaitForSeconds(.25f);
 

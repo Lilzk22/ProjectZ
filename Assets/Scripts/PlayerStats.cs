@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : CharacterStats
 {
     PlayerUI playerUI;
+
     private void Start()
     {
         playerUI = GetComponent<PlayerUI>();

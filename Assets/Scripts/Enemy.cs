@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]
     float damage;
+
     [SerializeField]
     float stoppingDistance;
 
@@ -36,6 +37,15 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            GetComponent<PlayerStats>().maxHealth -= damage;
+        }
+    }
+
     private void Update()
     {
         float dist = Vector3.Distance(transform.position, target.transform.position);

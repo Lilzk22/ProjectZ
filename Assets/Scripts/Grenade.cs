@@ -6,7 +6,8 @@ public class Grenade : MonoBehaviour
 {
     public float delay = 3f;
     public float blastRadius = 5f;
-    public float explosionForce = 100f;
+    public int damage = 100;
+    public float explosionForce = 1f;
     public AudioSource explosionSound;
 
     private float countDown;
@@ -47,7 +48,10 @@ public class Grenade : MonoBehaviour
                 explosionSound.Play();
             }
         }
-
+        
+       // GetComponent<Target>().health -= damage;
         Destroy(gameObject);
     }
+
+    
 }

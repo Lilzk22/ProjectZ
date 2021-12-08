@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Target : MonoBehaviour
+
+public class Nuke : MonoBehaviour
 {
-    public float health = 50f;
     public float pointsToAdd;
     PlayerPoints playerPoints;
 
@@ -11,19 +11,13 @@ public class Target : MonoBehaviour
     {
         playerPoints = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerPoints>();
     }
-
-    public void TakeDamage(float amount)
+    public void OnTriggerEnter(Collider other)
     {
-        health -= amount;
-        if(health <= 0f)
+        if (other.tag == "Player")
         {
-            Die();
+            //GameObject.FindGameObjectWithTag("Enemy").GetComponent<Target>();
+            playerPoints.currScore += pointsToAdd;
+            Destroy(gameObject);
         }
-    }
-
-    public void Die()
-    {
-        playerPoints.AddScore(pointsToAdd);
-        Destroy(gameObject);
     }
 }
